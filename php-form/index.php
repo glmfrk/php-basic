@@ -6,13 +6,17 @@
 
         if ( empty( $_REQUEST['user__name'] ) ) {
             $errName = "User Name is required.";
-        } else if ( empty( $_REQUEST['user__email'] ) ){
+        } elseif ( empty( $_REQUEST['user__email'] ) ) {
             $errEmail = "User Email is required.";
-        } else if ( empty( $_REQUEST['user__website'] ) ) {
+        } elseif ( !filter_var( $_REQUEST['user__email'], FILTER_VALIDATE_EMAIL )) {
+            $errEmail = "User Email is Invalid.";
+        } elseif ( empty( $_REQUEST['user__website'] ) ) {
             $errWeb = "User Website is required.";
-        } else if ( empty( $_REQUEST['user__gender'] ) ){
+        }elseif ( !filter_var( $_REQUEST['user__website'], FILTER_VALIDATE_URL )) {
+            $errWeb = "User Website URL is Invalid.";
+        } elseif ( empty( $_REQUEST['user__gender'] ) ) {
             $errGender = "User Gender is required.";
-        } else if ( empty( $_REQUEST['user__mgs'] ) ){
+        } elseif ( empty( $_REQUEST['user__mgs'] ) ) {
             $errMgs = "User Massage is required.";
         } else {
             
@@ -82,24 +86,24 @@
         <h4 style="color:red">* Required filled</h4>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
             <div class="mb-3">
-                <label for="user__name" class="form-label">User Name <span>* <?php echo $errName; ?> </span> </label>
+                <label for="user__name" class="form-label">User Name <span style="color:red; font-weight:bold;">* <?php echo $errName; ?> </span> </label>
                 <input type="text" name="user__name" class="form-control" id="user__name" placeholder="user name">
             </div>
             <div class="mb-3">
-                <label for="user__email" class="form-label">User Email <span>* <?php echo $errEmail; ?> </span> </label>
+                <label for="user__email" class="form-label">User Email <span style="color:red; font-weight:bold;">* <?php echo $errEmail; ?> </span> </label>
                 <input type="email" name="user__email" class="form-control" id="user__email" placeholder="example@email.com">
             </div>
             <div class="mb-3">
-                <label for="user__website" class="form-label">User Website <span>* <?php echo $errWeb; ?> </span> </label>
+                <label for="user__website" class="form-label">User Website <span style="color:red; font-weight:bold;">* <?php echo $errWeb; ?> </span> </label>
                 <input type="text" name="user__website" class="form-control" id="user__website" placeholder="website.com">
             </div>
             <div class="mb-3">
-                <label for="user__gender" class="form-label">User Gender :  <span>* <?php echo $errGender; ?> </span> </label>
+                <label for="user__gender" class="form-label">User Gender :  <span style="color:red; font-weight:bold;">* <?php echo $errGender; ?> </span> </label>
                 <input type="radio" name="user__gender" id="user__gender" value="female"><span> Female</span>
                 <input type="radio" name="user__gender" id="user__gender" value="male"><span> Male</span>
             </div>
             <div class="mb-3">
-                <label for="user__mgs" class="form-label">User Massagess <span>* <?php echo $errMgs; ?> </span> </label>
+                <label for="user__mgs" class="form-label">User Massagess <span style="color:red; font-weight:bold;">* <?php echo $errMgs; ?> </span> </label>
                 <textarea name="user__mgs" class="form-control" id="user__mgs" placeholder="Massage..." cols="5" rows="5"></textarea>
             </div>
   
