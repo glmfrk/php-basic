@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("assets/img/bg-image.jpeg") no-repeat center;
+  background-size: cover;
+}
+.content__body {
+  background: #d7d7d7;
+  border: 2px solid #4f4e4e;
+  margin: 15px auto;
+  height: 97%;
+  color: #111;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 20px 30px;
+}
+
+.container__wrapper {
+  background: rgb(63, 63, 63);
+  border-bottom: 1px solid #8d8888;
+  padding: 10px 0;
+}
+.header__part .title {
+  color: #848484;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+}
+.header__part span {
+  display: inherit;
+  font-size: 20px;
+  color: #707070;
+}
+
+.heading__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #8d8888;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+}
+/* ---------Footer ---------- */
+.footer__text {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* ----------- Form Validation CSS ------------ */
+.form__container {
+  max-width: 500px;
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  margin: auto;
+  border: 1.5px solid #111;
+  border-radius: 10px;
+}
+.form__container span {
+  display: inline-block;
+}
