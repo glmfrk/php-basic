@@ -11,11 +11,12 @@ body {
   background: #d7d7d7;
   border: 2px solid #4f4e4e;
   margin: 15px auto;
-  height: 97%;
+  height: 95%;
   color: #111;
   font-size: 18px;
   font-weight: 500;
   padding: 20px 30px;
+  min-height: 530px;
 }
 
 .container__wrapper {
@@ -45,24 +46,19 @@ body {
   margin-bottom: 15px;
 }
 /* ---------Footer ---------- */
+footer.footer__part {
+  position: sticky;
+  display: block;
+  width: 100%;
+  bottom: 0;
+}
 .footer__text {
   color: #fff;
   text-align: center;
   font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
+  padding-top: 5px;
 }
 
 /* ----------- Form Validation CSS ------------ */
-.form__container {
-  max-width: 500px;
-  width: 100%;
-  padding: 15px;
-  background: transparent;
-  margin: auto;
-  border: 1.5px solid #111;
-  border-radius: 10px;
-}
-.form__container span {
-  display: inline-block;
-}
