@@ -13,25 +13,11 @@
 
          <?php 
          
-            $intNum = 100;
-            $min = 1;
-            $max = 200;
+            $newArray = ['We', 'are', 'learning', 'PHP'];
 
-            if (filter_var($intNum, FILTER_VALIDATE_INT, $option = array('min_range' => $min, 'max_range' => $max)) ) {
-              var_dump($option);
-              echo "It is valid range.";
-            } else {
-              echo 'It is not valid range';
-            }
-            echo "<br/>";
+             echo implode(' ', $newArray);
 
-            $url = 'http://www.trainingwithliveproject.com/index.html/q?=key';
 
-            if (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED)) {
-              echo "This is valid url : " . $url;
-            } else {
-              echo "It was invalid url.";
-            }
          ?>
 
         </div>
