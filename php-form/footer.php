@@ -1,4 +1,5 @@
-
+</div>
+</section>
 <footer class="footer__part">
     <div class="container container__wrapper">
         <div class="row">

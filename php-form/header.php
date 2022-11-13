@@ -67,3 +67,11 @@
         </div>
     </div>
 </header>
+<section class="php__code-sec">
+  <div class="content__body container">
+      <div class="heading__box mb-2 border-bottom border-dark d-flex justify-content-between align-items-center">
+          <h3 class="heading">PHP Fundamental - "Array" </h3>
+          <p class="time">
+            <?php echo date('d-F-Y'); ?>
+          </p>
+      </div>

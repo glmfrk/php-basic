@@ -18,6 +18,10 @@
     console.log("Length of Employee array key is: " + arrayKeys);
     console.log("Length of Employee array value is: " + arrayValue);
 
+    // Array Methods 
+
+
+
  
 
     
